@@ -6,7 +6,7 @@ export default class App extends Component {
     return (
       <div>
         <BrowserRouter>
-          <Switch />
+          <Switch> </Switch>
         </BrowserRouter>
       </div>
     );
