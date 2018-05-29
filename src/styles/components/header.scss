@@ -21,4 +21,19 @@
 .header__title {
   font-size: 3.2rem;
   color: #3498db;
+  margin-bottom: 0;
+}
+
+.header__right-content-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__right-content-container__logout{
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-top: 0px;
+  margin-left: 2.4rem;
 }
