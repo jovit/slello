@@ -4,5 +4,21 @@
   height: 80px;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 2px solid #f2f4f9;
+}
+
+/*
+.header:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 1px;
+  width: 100%;
   border-bottom: 1px solid #f2f4f9;
+  top: 80px;
+}*/
+
+.header__title {
+  font-size: 3.2rem;
+  color: #3498db;
 }
