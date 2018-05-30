@@ -7,6 +7,10 @@ export default class Card extends Component {
     this.ellipsizeTextBox('textDescription');
   }
 
+  componentDidUpdate() {
+    this.ellipsizeTextBox('textDescription');
+  }
+
   ellipsizeTextBox = (className) => {
     const elements = document.getElementsByClassName(className);
     for (let i = 0; i < elements.length; i++) {
@@ -31,7 +35,8 @@ export default class Card extends Component {
       <div style={{
         width: '220px',
         height: '100%',
-        backgroundColor: '#FAFAFA'
+        backgroundColor: '#FAFAFA',
+        margin: '0 auto'
       }}
       >
         <div style={{

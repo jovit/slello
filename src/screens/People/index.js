@@ -28,10 +28,58 @@ export default class pagePeople extends Component {
     {
       job: 'Programador',
       text: 'O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor'
+    },
+    {
+      job: 'Designer',
+      text: 'O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor'
+    },
+    {
+      job: 'Programador',
+      text: 'O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor'
+    },
+    {
+      job: 'Programador',
+      text: 'O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor'
+    },
+    {
+      job: 'Programador',
+      text: 'O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor'
+    },
+    {
+      job: 'Programador',
+      text: 'O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor'
+    },
+    {
+      job: 'Programador',
+      text: 'O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor'
+    },
+    {
+      job: 'Designer',
+      text: 'O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor'
+    },
+    {
+      job: 'Programador',
+      text: 'O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor'
+    },
+    {
+      job: 'Programador',
+      text: 'O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor'
+    },
+    {
+      job: 'Programador',
+      text: 'O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor'
+    },
+    {
+      job: 'Programador',
+      text: 'O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor'
+    },
+    {
+      job: 'Programador',
+      text: 'O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor O programador trabalha com o desenvolvimento de aplicativos mobile e programação do servidor'
     }
   ]
 
-  showJobList = []
+  showJobList = this.jobList;
 
   filterJobs = (searchString) => {
     this.showJobList = [];
@@ -41,6 +89,10 @@ export default class pagePeople extends Component {
         console.log(this.showJobList);
       }
     }
+    if (searchString == '') {
+      this.showJobList = this.jobList;
+    }
+    this.setState({});
   }
 
   render() {
