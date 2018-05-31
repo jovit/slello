@@ -3,7 +3,10 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
 /*Components*/
 import Home from '../screens/Home';
-import Home2 from '../screens/Home2';
+import AddWidget from '../screens/AddWidget';
+import Charts from '../screens/Charts';
+import History from '../screens/History';
+import People from '../screens/People';
 import Header from '../screens/Header';
 import LeftBar from '../screens/LeftBar';
 import RightBar from '../screens/RightBar';
@@ -20,10 +23,10 @@ const AppRouter = () => {
           <LeftBar />
           <Switch>
             <Route path="/" component={Home} exact={true}/>
-            <Route path="/charts" component={Home2}/>
-            <Route path="/people" component={Home2}/>
-            <Route path="/andamento" component={Home2}/>
-            <Route path="/historico" component={ProjectStatus}/>
+            <Route path="/charts" component={Charts}/>
+            <Route path="/people" component={People}/>
+            <Route path="/add-widget" component={AddWidget}/>
+            <Route path="/history" component={History}/>
           </Switch>
           <RightBar />
         </div>

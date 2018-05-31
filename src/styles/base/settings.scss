@@ -21,4 +21,14 @@ html, body{
 .center-component-container{
   background-color: white;
   width: 756px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.water-mark{
+  text-align: center;
+  align-self: center;
+  font-size: 3.2rem;
 }
