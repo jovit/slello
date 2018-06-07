@@ -97,8 +97,8 @@ export default class pagePeople extends Component {
 
   render() {
     return (
-      <div>
-        <Container style={{ padding: '16px 0px' }}>
+      <div style={{width:'762px'}}>
+        <Container style={{ padding: '16px' }}>
           <Grid>
             <Grid.Row columns={2}>
               <Grid.Column>
@@ -109,6 +109,7 @@ export default class pagePeople extends Component {
                   icon="search"
                   iconPosition="left"
                   placeholder="Search topics"
+                  size='massive'
                   style={{ position: 'absolute', right: '16px' }}
                   onChange={(event, data) => { this.filterJobs(data.value); }}
                 />
