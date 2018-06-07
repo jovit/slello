@@ -97,7 +97,8 @@ export default class pagePeople extends Component {
 
   render() {
     return (
-      <div style={{width:'762px'}}>
+      <div className='center-component-container'>  
+      <div style={{width:'762px'}} >
         <Container style={{ padding: '16px' }}>
           <Grid>
             <Grid.Row columns={2}>
@@ -130,6 +131,7 @@ export default class pagePeople extends Component {
           </Grid>
         </Container>
       </div>
+    </div>
     );
   }
 }
