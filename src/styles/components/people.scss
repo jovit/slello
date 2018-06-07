@@ -1,0 +1,22 @@
+.people-cards {
+    justify-content: center;
+}
+
+.people-card__thumbnail {
+    height: 100px;
+    object-fit: cover;
+}
+
+.ui.card > .content > a > .header:not(.ui).people-card-content__header,
+.ui.cards > .card > .content > a > .header:not(.ui).people-card-content__header {
+    font-size: +2em;
+    height: auto;
+    border-bottom: none;
+    padding-bottom: .2em;
+}
+
+.people-card-content__members {
+    padding-bottom: .5em;
+    border-bottom: 1px solid #f2f4f9;
+}
+
