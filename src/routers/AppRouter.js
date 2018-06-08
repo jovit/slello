@@ -11,6 +11,7 @@ import Group from '../screens/Group';
 import Header from '../screens/Header';
 import LeftBar from '../screens/LeftBar';
 import RightBar from '../screens/RightBar';
+import PagePeople from '../screens/People/PagePeople';
 import ProjectStatus from "../screens/gorfo/index";
 import ProjectInfo1 from "../screens/ProjectInfo_1";
 import ProjectInfo2 from "../screens/ProjectInfo_2";
@@ -28,14 +29,15 @@ const AppRouter = () => {
           <Switch>
             <Route path="/" component={Home} exact={true}/>
             <Route path="/charts" component={Charts}/>
-            <Route path="/people" component={People}/>
+            <Route path="/add-widget" component={People}/>
             <Route path="/group/:id" component={Group}/>
-            <Route path="/add-widget" component={AddWidget}/>
+            {/* <Route path="/add-widget" component={AddWidget}/> */}
             <Route path="/history" component={ProjectStatus}/>
             <Route path="/projectinfo1" component={ProjectInfo1}/>
             <Route path="/projectinfo2" component={ProjectInfo2}/>
             <Route path="/projectinfo3" component={ProjectInfo3}/>
             <Route path="/projectinfo4" component={ProjectInfo4}/>
+            <Route path="/people" component={PagePeople}/>
           </Switch>
           <RightBar />
         </div>

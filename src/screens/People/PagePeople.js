@@ -3,7 +3,7 @@ import { Grid, Container, Input } from 'semantic-ui-react';
 import Card from './Card';
 
 
-export default class pagePeople extends Component {
+export default class PagePeople extends Component {
   jobList = [
     { 'job': 'React Developers', 'text': "If you know React and love it, feel free to join us.", 'thumbnail': 'https://cdn-images-1.medium.com/max/1468/1*kt9otqHk14BZIMNruiG0BA.png', 'member_count': 100 },
     { 'job': 'Python Lovers', 'text': ">>> print 'We are the {} who say \"{}!\"'.format('knights', 'Ni')", 'thumbnail': 'https://cdn-images-1.medium.com/max/1200/1*PPIp7twJJUknfohZqtL8pQ.png', 'member_count': 500 },
@@ -31,7 +31,7 @@ export default class pagePeople extends Component {
 
   render() {
     return (
-      <div className='center-component-container'>  
+      <div className='center-component-container'>
       <div style={{width:'762px'}} >
         <Container style={{ padding: '16px' }}>
           <Grid>
