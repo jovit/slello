@@ -31,7 +31,7 @@ const AppRouter = () => {
             <Route path="/people" component={People}/>
             <Route path="/group/:id" component={Group}/>
             <Route path="/add-widget" component={AddWidget}/>
-            <Route path="/history" component={History}/>
+            <Route path="/history" component={ProjectStatus}/>
             <Route path="/projectinfo1" component={ProjectInfo1}/>
             <Route path="/projectinfo2" component={ProjectInfo2}/>
             <Route path="/projectinfo3" component={ProjectInfo3}/>
