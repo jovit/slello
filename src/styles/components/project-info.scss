@@ -5,21 +5,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  max-height: 100vh;
   height: calc(100vh - 80px);
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-top: 400px;
 }
 
 .center-component-container__project__title{
-  position: fixed;
   width: 744px;
   -ms-flex-item-align: left;
   align-self: left;
   /* justify-self: flex-start; */
   -ms-flex-item-align: start;
   align-self: flex-start;
-  top: 8.0rem;
   background-color: white;
   z-index: 90;
 }
@@ -38,5 +35,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 2.4rem;
+}
+
+.center-component-container__project__content__menu{
+  margin-top: 0px;
+}
+
+.center-component-container__project__timeline{
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.center-component-container__project__content__step{
+  margin-bottom: 2.4rem;
 }
