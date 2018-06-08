@@ -30,7 +30,7 @@ const AppRouter = () => {
             <Route path="/" component={Home} exact={true}/>
             <Route path="/charts" component={Charts}/>
             <Route path="/group/:id" component={Group}/>
-            {/* <Route path="/add-widget" component={AddWidget}/> */}
+            <Route path="/add-widget" component={People}/>
             <Route path="/history" component={ProjectStatus}/>
             <Route path="/projectinfo1" component={ProjectInfo1}/>
             <Route path="/projectinfo2" component={ProjectInfo2}/>
