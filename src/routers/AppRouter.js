@@ -6,7 +6,7 @@ import Home from '../screens/Home';
 import AddWidget from '../screens/AddWidget';
 import Charts from '../screens/Charts';
 import History from '../screens/History';
-import People from '../screens/People/index';
+import People from '../screens/People';
 import Group from '../screens/Group';
 import Header from '../screens/Header';
 import LeftBar from '../screens/LeftBar';
