@@ -6,7 +6,6 @@ import Home from '../screens/Home';
 import AddWidget from '../screens/AddWidget';
 import Charts from '../screens/Charts';
 import History from '../screens/History';
-import People from '../screens/People/index';
 import Group from '../screens/Group';
 import Header from '../screens/Header';
 import LeftBar from '../screens/LeftBar';
@@ -29,7 +28,6 @@ const AppRouter = () => {
           <Switch>
             <Route path="/" component={Home} exact={true}/>
             <Route path="/charts" component={Charts}/>
-            <Route path="/add-widget" component={People}/>
             <Route path="/group/:id" component={Group}/>
             {/* <Route path="/add-widget" component={AddWidget}/> */}
             <Route path="/history" component={ProjectStatus}/>
