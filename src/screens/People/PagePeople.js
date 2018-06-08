@@ -3,7 +3,7 @@ import { Grid, Container, Input } from 'semantic-ui-react';
 import Card from './Card';
 
 
-export default class pagePeople extends Component {
+export default class PagePeople extends Component {
   jobList = [
     {
       job: 'Designer',
@@ -97,7 +97,7 @@ export default class pagePeople extends Component {
 
   render() {
     return (
-      <div className='center-component-container'>  
+      <div className='center-component-container'>
       <div style={{width:'762px'}} >
         <Container style={{ padding: '16px' }}>
           <Grid>

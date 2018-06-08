@@ -10,18 +10,20 @@ class ProjectInfo_1 extends React.Component {
   state = {}
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-  
+
   render() {
     return (
-      <div className="center-component-container">
-          <div style={{marginLeft: 30, align: 'top'}}>
+      <div className="center-component-container__project">
+        <div className="center-component-container__project__title">
+          <div className="center-component-container__project__title__wrapper">
             <h1 style={{textAlign: 'left'}} className="water-mark">Projeto Matthew Harris</h1>
             <p className="water-mark" style={{textAlign: 'left',fontSize: 15}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Nam vehicula nisl eget lectus scelerisque faucibus at sit amet arcu.
             Nunc quis augue tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
             Nulla facilisi. Vestibulum imperdiet non sem eu laoreet.</p>
           </div>
-
+        </div>
+        <div className="center-component-container__project__content">
           <Menu icon='labeled' style={{marginTop: 30}}>
             <Menu.Item style={square} name='gamepad' onClick={this.handleItemClick}>
               <Icon name='chart line' />
@@ -125,6 +127,7 @@ class ProjectInfo_1 extends React.Component {
               </Table.Row>
             </Table.Body>
           </Table>
+        </div>
       </div>
     );
   };
