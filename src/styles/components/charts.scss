@@ -1,0 +1,26 @@
+.charts-component-container{
+  background-color: white;
+  width: 756px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  //align-items: center;
+  //justify-content: center;
+}
+
+.charts-title{
+  text-align: left;
+  align-self: left;
+  font-size: 3.2rem;
+  margin-bottom: 30px;
+}
+
+.chart1-style{
+  width: 600px;
+  height: 300px;
+}
+
+.chart-body{
+  text-align: center;
+  align-self: center;
+}
