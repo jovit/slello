@@ -78,7 +78,7 @@ class RightBar extends React.Component {
   changeSelectedWidget(widget_name){
     console.log("Hello there!!!");
     console.log(widget_name);
-    if(widget_name != this.state.selectedWidget){
+    if(widget_name !== this.state.selectedWidget){
       console.log("entrou");
       this.setState({
         selectedWidget: widget_name

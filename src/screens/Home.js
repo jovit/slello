@@ -7,7 +7,7 @@ class Home extends React.Component {
       <div className="home-component-container">
         <div>
             <h1 className="home-title">Projetos</h1>
-            <Link to="/History.js">
+            <Link to="/projectinfo1">
                 <div className="home-card">
                     <h2>Grande Portal</h2>
                 </div>

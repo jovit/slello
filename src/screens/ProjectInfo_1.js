@@ -33,7 +33,7 @@ class ProjectInfo_1 extends React.Component {
               <p style={{fontSize: 22}}>Equipe</p>
             </Menu.Item>
 
-            <Menu.Item style={square} name='video play' onClick={this.handleItemClick}>
+            <Menu.Item style={square} name='video play' onClick={() => {this.props.history.push("/history")}}>
               <Icon name='history' />
               <p style={{fontSize: 22}}>Histórico</p>
             </Menu.Item>

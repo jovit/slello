@@ -45,11 +45,11 @@ const Group = ({ match }) => {
                       <Feed.User>{ discussion.op }</Feed.User>
                       <Link to="#">
                         <Icon name="talk" />
-                        { discussion.comment_count } { discussion.comment_count != 1 ? 'comments' : 'comment' }
+                        { discussion.comment_count } { discussion.comment_count !== 1 ? 'comments' : 'comment' }
                       </Link>
                       <Feed.Like>
                         <Icon name="hand point up outline" />
-                        { discussion.votes } { discussion.votes != 1 ? 'votes' : 'vote' }
+                        { discussion.votes } { discussion.votes !== 1 ? 'votes' : 'vote' }
                       </Feed.Like>
                     </Feed.Meta>
                 </Feed.Content>
