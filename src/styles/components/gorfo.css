@@ -25,11 +25,11 @@ body {
   padding-bottom: 0px;
   color: grey; }
 
-h1 {
+.Title_history {
   margin-top: 0px;
-  font-weight: 70;
+  font-weight: 200;
   font-size: 32px;
-  color: grey; }
+  color: blue; }
 
 .Name_Project {
   font-weight: 400;
@@ -44,7 +44,7 @@ h1 {
   height: 100%;
   width: 2px;
   background: grey;
-  left: 431px; }
+  left: 480px; }
 
 .ramo1 {
   position: relative;
