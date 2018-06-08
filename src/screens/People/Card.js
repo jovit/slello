@@ -38,6 +38,7 @@ export default class Card extends Component {
         backgroundColor: '#FAFAFA',
         margin: '0 auto'
       }}
+      onClick={this.props.onClick}
       >
         <div style={{
           backgroundColor: '#8492A6',
