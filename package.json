@@ -2,7 +2,7 @@
   "name": "slello",
   "version": "0.1.0",
   "private": true,
-  "homapage": "https://jovit.github.io/slello",
+  "homapage": "https://jovit.github.io/slello/",
   "dependencies": {
     "gh-pages": "^1.2.0",
     "node-sass-chokidar": "^1.3.0",

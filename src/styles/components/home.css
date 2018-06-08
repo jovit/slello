@@ -12,5 +12,31 @@
 
 .home-card {
   width: 300px;
+  height: 120px;
+  display: inline-block;
   border-style: ridge;
-  text-align: center; }
+  text-align: center;
+  margin: 10px 15px 0px 15px; }
+
+.wip-project-status {
+  font-size: 1.5rem;
+  color: #ffb300; }
+
+.done-project-status {
+  font-size: 1.5rem;
+  color: green; }
+
+.canceled-project-status {
+  font-size: 1.5rem;
+  color: red; }
+
+.card-content {
+  font-size: 1.5rem; }
+
+.projects-row {
+  margin-bottom: 20px; }
+
+.add-image {
+  margin-top: 10px;
+  width: 60px;
+  height: 60px; }
