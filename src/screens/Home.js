@@ -5,12 +5,67 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home-component-container">
-        <div>
-            <h1 className="home-title">Projetos</h1>
+        <h1 className="home-title">Projetos</h1>
+        <div className="projects-row">
             <Link to="/projectinfo1">
                 <div className="home-card">
-                    <h2>Grande Portal</h2>
-                </div>
+                    <h2>Projeto Matthew Harris</h2>
+                    <p className="done-project-status">Finalizado</p>
+                    <p className="card-content">
+                      Início: 20/04/2018 <br />
+                      Fim: 30/05/2018
+                    </p>
+                  </div>
+            </Link>
+             <Link to="/projectinfo2">
+              <div className="home-card">
+                  <h2>Projeto Jake Smith</h2>
+                  <p className="wip-project-status">Em andamento</p>
+                  <p className="card-content">
+                    Início: 30/05/2018 <br />
+                    Fim previsto: 20/06/2020
+                  </p>
+              </div>
+            </Link>
+        </div>
+         <div className="projects-row">
+            <Link to="/projectinfo3">
+                <div className="home-card">
+                    <h2>Projeto Slello</h2>
+                    <p className="wip-project-status">Em andamento</p>
+                    <p className="card-content">
+                      Início: 20/04/2018 <br />
+                      Fim previsto: 30/05/2055
+                    </p>
+                  </div>
+            </Link>
+             <Link to="/projectinfo4">
+              <div className="home-card">
+                  <h2>IC 4</h2>
+                  <p className="wip-project-status">Em andamento</p>
+                  <p className="card-content">
+                    Início: 30/05/2018 <br />
+                    Fim previsto: 20/06/2088
+                  </p>
+              </div>
+            </Link>
+        </div>
+        <div className="projects-row">
+            <Link to="/projectinfo1">
+                <div className="home-card">
+                    <h2>Windows Phone</h2>
+                    <p className="canceled-project-status">Cancelado</p>
+                    <p className="card-content">
+                      Início: 08/11/2010 <br />
+                      Fim: 09/11/2010
+                    </p>
+                  </div>
+            </Link>
+             <Link to="/projectinfo2">
+               <div className="home-card">
+                  <img src="img/selected_add_widget.svg" className="add-image"/>
+                  <h2>Adicionar Projeto</h2>
+              </div>
             </Link>
         </div>
       </div>
