@@ -1,0 +1,16 @@
+.home-component-container {
+  background-color: white;
+  width: 756px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px; }
+
+.home-title {
+  text-align: left;
+  align-self: left;
+  font-size: 3.2rem; }
+
+.home-card {
+  width: 300px;
+  border-style: ridge;
+  text-align: center; }

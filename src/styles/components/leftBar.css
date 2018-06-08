@@ -1,0 +1,96 @@
+.left-bar-container {
+  width: 272px;
+  background-color: white;
+  max-height: 100vh;
+  height: calc(100vh - 80px);
+  border-right: 2px solid #f2f4f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.left-bar-container__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid #f2f4f9;
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem;
+  min-height: 256px; }
+
+.left-bar-container__profile__picture {
+  width: 64px;
+  height: 64px; }
+
+.left-bar-container__profile__name {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #334A5D;
+  margin-top: 1.6rem; }
+
+.left-bar-container__profile__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center; }
+
+.left-bar-container__profile__button__picture {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.8rem; }
+
+.left-bar-container__profile__button__text {
+  font-size: 1.2rem;
+  color: #3498db; }
+
+.left-bar-container__chat-title {
+  align-self: flex-start;
+  margin-left: 1.6rem;
+  font-size: 1.6rem; }
+
+/*Chat component*/
+.left-bar-container__chat {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; }
+
+.left-bar-container__chat__conversation {
+  margin-left: 1.6rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.left-bar-container__chat__conversation__unreaded {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.left-bar-container__chat__conversation__unreaded__number {
+  font-size: 1.0rem;
+  color: white;
+  text-align: center; }
+
+.left-bar-container__chat__conversation__info {
+  margin-left: 0.8rem;
+  display: flex;
+  flex-direction: column; }
+
+.left-bar-container__chat__conversation__info__sender {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem; }
+
+.left-bar-container__chat__conversation__info__preview {
+  font-size: 0.8rem;
+  color: #334A5D; }
+
+.circleBase {
+  border-radius: 50%; }
+
+.type1 {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: #e74c3c; }
