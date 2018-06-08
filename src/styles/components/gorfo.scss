@@ -20,17 +20,18 @@ body {
 }
 
 .my-icon{
-    margin-top: 8px;
+    margin-top: 6px;
     margin-right: 0px;
     border: 0px;
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
+    font-size: 15px;
     color: grey;
 }
 
-h1 {
+.Title_history {
     margin-top: 0px;
     font-weight: 70;
     font-size: 32px;
@@ -47,11 +48,11 @@ h1 {
 
 .barra_vertical{
     position: absolute;
-    top: 250px;
+    top: 350px;
     height: 100%;
     width: 2px;
     background: grey;
-    left: 431px;
+    left: 515px;
 }
 
 .ramo1{
@@ -64,10 +65,10 @@ h1 {
 .box1{
     position: absolute;
     top: 40px;
-    left: 392px;
+    left: 9px;
     border-radius: 100%;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background: rgb(249, 250, 250);
     border: 2px solid gray;
     display: flex;
@@ -76,10 +77,10 @@ h1 {
 .box2{
     position: absolute;
     top: 130px;
-    left: 392px;
+    left: 9px;
     border-radius: 100%;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background: rgb(249, 250, 250);
     border: 2px solid gray;
     display: flex;
@@ -88,10 +89,10 @@ h1 {
 .box3{
     position: absolute;
     top: 220px;
-    left: 392px;
+    left: 9px;
     border-radius: 100%;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background: rgb(249, 250, 250);
     border: 2px solid gray;
     display: flex;
@@ -100,10 +101,10 @@ h1 {
 .box4{
     position: absolute;
     top: 310px;
-    left: 392px;
+    left: 9px;
     border-radius: 100%;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background: rgb(249, 250, 250);
     border: 2px solid gray;
     display: flex;
@@ -112,10 +113,10 @@ h1 {
 .box5{
     position: absolute;
     top: 400px;
-    left: 392px;
+    left: 9px;
     border-radius: 100%;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background: rgb(249, 250, 250);
     border: 2px solid gray;
     display: flex;
@@ -124,36 +125,37 @@ h1 {
 .modulo_texto_ramo1{
     position: relative;
     top: 55px;
-    left: 450px;
+    left: 40px;
 }
 
 .modulo_texto_ramo2{
     position: relative;
     top: 145px;
-    left: 450px;
+    left: 40px;
 }
 
 .modulo_texto_ramo3{
     position: relative;
     top: 235px;
-    left: 450px;
+    left: 40px;
 }
 
 .modulo_texto_ramo4{
     position: relative;
     top: 325px;
-    left: 450px;
+    left: 40px;
 }
 
 .modulo_texto_ramo5{
     position: relative;
     top: 415px;
-    left: 450px;
+    left: 40px;
 }
 
 .text1{
-    margin-bottom: 10px;
-    font-size: 18px;
+    margin-bottom: 15px;
+    left: 23px;
+    font-size: 15px;
     font-family: "Arial";
     color: gray;
 }

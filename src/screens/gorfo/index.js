@@ -21,36 +21,36 @@ const chevron_circle_left = () => (
 )
 
 const mudanca_icon = () => (
-    <i style={{color:"gray", fontSize:"60px", lineHeight:"1.2", width: "1.5em"}} class="exchange icon"></i>
+    <i style={{color:"gray", fontSize:"45px", lineHeight:"1.2", width: "1.5em"}} class="exchange icon"></i>
 )
 
 const chat_icon = () => (
-    <i style={{color:"gray", fontSize:"60px", lineHeight:"1.2", width: "1.5em"}} class="comments outline icon"></i>
+    <i style={{color:"gray", fontSize:"45px", lineHeight:"1.2", width: "1.5em"}} class="comments outline icon"></i>
 )
 
 const design_icon = () => (
-    <i style={{color:"gray", fontSize:"55px", lineHeight:"1.4", width: "1.5em"}} class="paint brush icon"></i>
+    <i style={{color:"gray", fontSize:"40px", lineHeight:"1.4", width: "1.5em"}} class="paint brush icon"></i>
 )
 
 const cobranca_icon = () => (
-    <i style={{color:"gray", fontSize:"50px", lineHeight:"1.5", width: "1.50em"}} class="hourglass end icon"></i>
+    <i style={{color:"gray", fontSize:"38px", lineHeight:"1.5", width: "1.8em"}} class="hourglass end icon"></i>
 )
 
 const calendar_icon = () => (
-    <i style={{color:"gray", fontSize:"50px", lineHeight:"1.5", width: "1.50em"}} class="calendar icon"></i>
+    <i style={{color:"gray", fontSize:"40px", lineHeight:"1.3", width: "1.50em"}} class="calendar icon"></i>
 )
 
 export default class ProjectStatus extends React.Component {
 
     style={
-        teste:{color:"gray", fontSize:"30px"},
+        teste:{color:"gray", fontSize:"23px"},
     }
   render() {
   return (
         <div>
           <div class="container-gorfo">
             {chevron_circle_left()}
-            <h1>
+            <h1 class="Title_history">
                 Histórico de Edições:
             </h1>
             <span class="tab"></span>
@@ -68,7 +68,7 @@ export default class ProjectStatus extends React.Component {
               <div class="modulo_texto_ramo1">
                   <div class="text1">2018-05-24 10:06 PM</div>
                   <div class="text2">
-                    <div style={{color:"blue", fontSize:"30px"}}>Luiz Guilherme</div>
+                    <div style={{color:"blue", fontSize:"23px"}}>Luiz Guilherme</div>
                     <span class="tab" ></span>
                     <div style={{...this.style.teste}}>alterou o entregável 3</div>
                   </div>
@@ -81,7 +81,7 @@ export default class ProjectStatus extends React.Component {
               <div class="modulo_texto_ramo2">
                   <div class="text1">2018-05-22 04:27 AM</div>
                   <div class="text2">
-                    <div style={{color:"green", fontSize:"30px"}}>Felipe Pessina</div>
+                    <div style={{color:"green", fontSize:"23px"}}>Felipe Pessina</div>
                     <span class="tab" ></span>
                     <div style={{...this.style.teste}}>lhe enviou uma mensagem</div>
                   </div>
@@ -94,7 +94,7 @@ export default class ProjectStatus extends React.Component {
               <div class="modulo_texto_ramo3">
                   <div class="text1">2018-05-18 09:40 PM</div>
                   <div class="text2">
-                    <div style={{color:"#bb9533", fontSize:"30px"}}>João Victor</div>
+                    <div style={{color:"#bb9533", fontSize:"23px"}}>João Victor</div>
                     <span class="tab" ></span>
                     <div style={{...this.style.teste}}>completou o design do projeto</div>
                   </div>
@@ -107,7 +107,7 @@ export default class ProjectStatus extends React.Component {
               <div class="modulo_texto_ramo4">
                   <div class="text1">2018-05-07 08:21 AM</div>
                   <div class="text2">
-                    <div style={{color:"#2f3668", fontSize:"30px"}}>Rogério</div>
+                    <div style={{color:"#2f3668", fontSize:"23px"}}>Rogério</div>
                     <span class="tab" ></span>
                     <div style={{...this.style.teste}}>te cobrou da Sprint 4</div>
                   </div>
@@ -120,7 +120,7 @@ export default class ProjectStatus extends React.Component {
               <div class="modulo_texto_ramo5">
                   <div class="text1">2018-04-29 10:07 AM</div>
                   <div class="text2">
-                    <div style={{color:"#ea1a7c", fontSize:"30px"}}>Bernardo</div>
+                    <div style={{color:"#ea1a7c", fontSize:"23px"}}>Bernardo</div>
                     <span class="tab" ></span>
                     <div style={{...this.style.teste}}>marcou um evento em seu calendário</div>
                   </div>
