@@ -13,18 +13,22 @@ class Home extends React.Component {
   }
 
   async componentDidMount() {
-    const headers = {
-      Authorization: "Basic am92aXQ6am92aXQ="
+    const auth = {
+        username: "rasmus.lerdorf",
+        password: "php4life"
     };
-    const response = await axios.post("https://gentle-thicket-23408.herokuapp.com/auth", null, {
-      headers
+    
+    const baseUrl = "http://localhost:13182"
+      
+    const response = await axios.post(`${baseUrl}/auth`, null, {
+      auth
     });
 
     const token = response.data.data.token
     
     this.setState({token: response.data.data.token})
 
-    await axios.get("https://gentle-thicket-23408.herokuapp.com/v1/projects", {
+    await axios.get(`${baseUrl}/v1/projects`, {
       data: {},
       headers: {
         Authorization: `Bearer ${token}`,

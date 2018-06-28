@@ -20,7 +20,7 @@ import ProjectInfo4 from "../screens/ProjectInfo_4";
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div class="container">
         <Header />
         <div id="browserRouterDiv">
@@ -29,13 +29,12 @@ const AppRouter = () => {
             <Route path="/" component={Home} exact={true} />
             <Route path="/charts" component={Charts} />
             <Route path="/group/:id" component={Group} />
-            <Route path="/add-widget" component={People} />
             <Route path="/history" component={ProjectStatus} />
             <Route path="/projectinfo1" component={ProjectInfo1} />
             <Route path="/projectinfo2" component={ProjectInfo2} />
             <Route path="/projectinfo3" component={ProjectInfo3} />
             <Route path="/projectinfo4" component={ProjectInfo4} />
-            <Route path="/people" component={PagePeople} />
+            <Route path="/people" component={People} />
           </Switch>
           <RightBar />
         </div>
