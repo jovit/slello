@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import _ from "lodash";
 
 class Conversation extends React.Component {
   constructor(props) {
@@ -112,7 +113,7 @@ class Conversation extends React.Component {
         </div>
         <div style={{ fontSize: "16px" }}>
           {this.state.expanded
-            ? this.state.messages.map(message => (
+            ? this.state.messages.slice(Math.max(this.state.messages.length - 6, 1)).map(message => (
                 <p
                   key={message.id.timestamp}
                   className="left-bar-container__chat__conversation__info__preview"
@@ -130,6 +131,7 @@ class Conversation extends React.Component {
               type="text"
               placeholder="Enviar mensagem"
               onKeyPress={e => (e.key === "Enter" ? this.sendMessage() : null)}
+              style={{ borderWidth: 0 }}
             />
           )}
         </div>
