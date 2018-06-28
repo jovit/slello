@@ -29,7 +29,6 @@ class Conversation extends React.Component {
     const token = response.data.data.token;
 
     this.setState({ token: token });
-
     const messagesResponse = await axios.get(
       "https://gentle-thicket-23408.herokuapp.com/latest/messages?channel=" +
         this.props.name,
@@ -41,10 +40,28 @@ class Conversation extends React.Component {
     );
 
     this.setState({ messages: messagesResponse.data });
+
+    this.interval = setInterval(async () => {
+      const messagesResponse = await axios.get(
+        "https://gentle-thicket-23408.herokuapp.com/latest/messages?channel=" +
+          this.props.name,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        }
+      );
+
+      this.setState({ messages: messagesResponse.data });
+    }, 5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   async sendMessage() {
-    const message = this.state.messageInput
+    const message = this.state.messageInput;
 
     this.setState({ messageInput: "" });
 
@@ -73,7 +90,6 @@ class Conversation extends React.Component {
     );
 
     this.setState({ messages: messageResponse.data });
-
   }
 
   render() {
