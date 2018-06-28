@@ -95,7 +95,7 @@ class Conversation extends React.Component {
 
   render() {
     return (
-      <Link to="/">
+      <div >
         <div className="left-bar-container__chat__conversation">
           <div className="left-bar-container__chat__conversation__unreaded circleBase type1">
             <p className="left-bar-container__chat__conversation__unreaded__number">
@@ -135,7 +135,7 @@ class Conversation extends React.Component {
             />
           )}
         </div>
-      </Link>
+      </div>
     );
   }
 }
