@@ -16,11 +16,21 @@ class Home extends React.Component {
     const headers = {
       Authorization: "Basic am92aXQ6am92aXQ="
     };
-    const response = await axios.post("https://gentle-thicket-23408.herokuapp.com/auth", undefined, {
+    const response = await axios.post("https://gentle-thicket-23408.herokuapp.com/auth", null, {
       headers
     });
+
+    const token = response.data.data.token
     
     this.setState({token: response.data.data.token})
+
+    await axios.get("https://gentle-thicket-23408.herokuapp.com/v1/projects", {
+      data: {},
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      }
+    })
   }
 
   render() {
