@@ -71,7 +71,7 @@ class Group extends React.Component {
                   <Feed.Extra text>{discussion.description}</Feed.Extra>
                   <Feed.Meta>
                     <Feed.User>{discussion.op.username}</Feed.User>
-                    <Link to="#">
+                    <Link to={`/group/${this.state.communityUrl}/${discussion.id}`}>
                       <Icon name="talk" />
                       {discussion.comments.length}{" "}
                       {discussion.comments.length !== 1

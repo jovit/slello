@@ -17,6 +17,7 @@ import ProjectInfo1 from "../screens/ProjectInfo_1";
 import ProjectInfo2 from "../screens/ProjectInfo_2";
 import ProjectInfo3 from "../screens/ProjectInfo_3";
 import ProjectInfo4 from "../screens/ProjectInfo_4";
+import TopicComments from "../screens/TopicComments";
 
 const AppRouter = () => {
   return (
@@ -28,6 +29,7 @@ const AppRouter = () => {
           <Switch>
             <Route path="/" component={Home} exact={true} />
             <Route path="/charts" component={Charts} />
+            <Route path="/group/:id/:discussionId" component={TopicComments} />
             <Route path="/group/:id" component={Group} />
             <Route path="/history" component={ProjectStatus} />
             <Route path="/projectinfo1" component={ProjectInfo1} />

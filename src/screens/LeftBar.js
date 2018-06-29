@@ -95,7 +95,7 @@ class Conversation extends React.Component {
 
   render() {
     return (
-      <div >
+      <div>
         <div className="left-bar-container__chat__conversation">
           <div className="left-bar-container__chat__conversation__unreaded circleBase type1">
             <p className="left-bar-container__chat__conversation__unreaded__number">
@@ -113,25 +113,26 @@ class Conversation extends React.Component {
         </div>
         <div style={{ fontSize: "16px" }}>
           {this.state.expanded
-            ? this.state.messages.slice(Math.max(this.state.messages.length - 6, 1)).map(message => (
-                <p
-                  key={message.id.timestamp}
-                  className="left-bar-container__chat__conversation__info__preview"
-                  style={{ fontSize: "16px" }}
-                >
-                  <strong>{message.user}:</strong> {message.message}
-                </p>
-              ))
+            ? this.state.messages
+                .slice(Math.max(this.state.messages.length - 6, 1))
+                .map(message => (
+                  <p
+                    key={message.id.timestamp}
+                    className="left-bar-container__chat__conversation__info__preview"
+                    style={{ fontSize: "16px" }}
+                  >
+                    <strong>{message.user}:</strong> {message.message}
+                  </p>
+                ))
             : null}
           {this.state.expanded && (
             <input
               value={this.state.messageInput}
               onChange={e => this.setState({ messageInput: e.target.value })}
-              style={{ width: "100%" }}
+              style={{ width: "100%", borderWidth: 0 }}
               type="text"
               placeholder="Enviar mensagem"
               onKeyPress={e => (e.key === "Enter" ? this.sendMessage() : null)}
-              style={{ borderWidth: 0 }}
             />
           )}
         </div>
