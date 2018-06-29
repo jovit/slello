@@ -5,104 +5,59 @@ import axios from "axios";
 
 class Home extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      token: ""
-    }
+      token: "",
+      projects: []
+    };
   }
 
   async componentDidMount() {
     const auth = {
-        username: "rasmus.lerdorf",
-        password: "php4life"
+      username: "jovit",
+      password: "jovit"
     };
-    
-    const baseUrl = "http://localhost:13182"
-      
+
+    const baseUrl = "https://gentle-thicket-23408.herokuapp.com";
+
     const response = await axios.post(`${baseUrl}/auth`, null, {
       auth
     });
 
-    const token = response.data.data.token
-    
-    this.setState({token: response.data.data.token})
+    const token = response.data.data.token;
 
-    await axios.get(`${baseUrl}/v1/projects`, {
-      data: {},
+    this.setState({ token: response.data.data.token });
+
+    const projectsResponse = await axios.get(`${baseUrl}/v1/projects`, {
       headers: {
         Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       }
-    })
+    });
+
+    this.setState({ projects: projectsResponse.data.data });
   }
 
   render() {
+    console.log(this.state.projects);
     return (
       <div className="home-component-container">
         <h1 className="home-title">Projetos</h1>
         <div className="projects-row">
-          <Link to="/projectinfo1">
-            <div className="home-card">
-              <h2>Projeto Matthew Harris</h2>
-              <p className="done-project-status">Finalizado</p>
-              <p className="card-content">
-                Início: 20/04/2018 <br />
-                Fim: 30/05/2018
-              </p>
-            </div>
-          </Link>
-          <Link to="/projectinfo2">
-            <div className="home-card">
-              <h2>Projeto Jake Smith</h2>
-              <p className="wip-project-status">Em andamento</p>
-              <p className="card-content">
-                Início: 30/05/2018 <br />
-                Fim previsto: 20/06/2020
-              </p>
-            </div>
-          </Link>
-        </div>
-        <div className="projects-row">
-          <Link to="/projectinfo3">
-            <div className="home-card">
-              <h2>Projeto Slello</h2>
-              <p className="wip-project-status">Em andamento</p>
-              <p className="card-content">
-                Início: 20/04/2018 <br />
-                Fim previsto: 30/05/2055
-              </p>
-            </div>
-          </Link>
-          <Link to="/projectinfo4">
-            <div className="home-card">
-              <h2>IC 4</h2>
-              <p className="wip-project-status">Em andamento</p>
-              <p className="card-content">
-                Início: 30/05/2018 <br />
-                Fim previsto: 20/06/2088
-              </p>
-            </div>
-          </Link>
-        </div>
-        <div className="projects-row">
-          <Link to="/projectinfo1">
-            <div className="home-card">
-              <h2>Windows Phone</h2>
-              <p className="canceled-project-status">Cancelado</p>
-              <p className="card-content">
-                Início: 08/11/2010 <br />
-                Fim: 09/11/2010
-              </p>
-            </div>
-          </Link>
-          <Link to="/projectinfo2">
-            <div className="home-card">
-              <img src="img/selected_add_widget.svg" className="add-image" />
-              <h2>Adicionar Projeto</h2>
-            </div>
-          </Link>
-        </div>
+          {this.state.projects.map(project => (
+            <Link key={project.id.timestamp} to="/projectinfo1">
+              <div className="home-card">
+                <h2>{project.name}</h2>
+                <p className="wip-project-status">{project.status}</p>
+                <p className="card-content">
+                  Início: {project.startDate} <br />
+                  Fim: {project.endDate}
+                </p>
+              </div>
+            </Link>
+          ))}
+          </div>
       </div>
     );
   }
