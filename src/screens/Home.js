@@ -29,35 +29,54 @@ class Home extends React.Component {
 
     this.setState({ token: response.data.data.token });
 
-    const projectsResponse = await axios.get(`${baseUrl}/v1/projects`, {
+    const projectResponse = await axios.get(`${baseUrl}/v1/projects`, {
+      data: {},
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json"
       }
     });
 
-    this.setState({ projects: projectsResponse.data.data });
+    console.log(projectResponse);
+    const projects = projectResponse.data.data;
+    console.log(projects);
+    this.setState({ projects });
   }
 
   render() {
-    console.log(this.state.projects);
     return (
       <div className="home-component-container">
-        <h1 className="home-title">Projetos</h1>
+        <h1 className="home-title">Projects</h1>
         <div className="projects-row">
-          {this.state.projects.map(project => (
-            <Link key={project.id.timestamp} to="/projectinfo1">
-              <div className="home-card">
-                <h2>{project.name}</h2>
-                <p className="wip-project-status">{project.status}</p>
-                <p className="card-content">
-                  Início: {project.startDate} <br />
-                  Fim: {project.endDate}
-                </p>
-              </div>
-            </Link>
-          ))}
-          </div>
+          {this.state.projects.map(project => {
+            let statusIcon = "";
+            switch (project.status) {
+              case "Done":
+                statusIcon = "done";
+                break;
+              case "Cancelled":
+                statusIcon = "canceled";
+                break;
+              default:
+                statusIcon = "wip";
+                break;
+            }
+            return (
+              <Link to="/projectinfo1">
+                <div className="home-card">
+                  <h2>{project.name}</h2>
+                  <p className={`${statusIcon}-project-status`}>
+                    {project.status}
+                  </p>
+                  <p className="card-content">
+                    Início: {project.startDate} <br />
+                    Fim: {project.endDate}
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </div>
     );
   }
