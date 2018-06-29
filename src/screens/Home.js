@@ -4,108 +4,82 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props)
+    constructor(props) {
+        super(props)
 
-    this.state = {
-      token: ""
+        this.state = {
+            token: "",
+            projects: []
+        }
     }
-  }
 
-  async componentDidMount() {
-    const auth = {
-        username: "rasmus.lerdorf",
-        password: "php4life"
-    };
-    
-    const baseUrl = "http://localhost:13182"
-      
-    const response = await axios.post(`${baseUrl}/auth`, null, {
-      auth
-    });
+    async componentDidMount() {
+        const auth = {
+            username: "jovit",
+            password: "jovit"
+        };
 
-    const token = response.data.data.token
-    
-    this.setState({token: response.data.data.token})
+        const baseUrl = "https://gentle-thicket-23408.herokuapp.com"
 
-    await axios.get(`${baseUrl}/v1/projects`, {
-      data: {},
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json'
-      }
-    })
-  }
+        const response = await axios.post(`${baseUrl}/auth`, null, {
+            auth
+        });
 
-  render() {
-    return (
-      <div className="home-component-container">
-        <h1 className="home-title">Projetos</h1>
-        <div className="projects-row">
-          <Link to="/projectinfo1">
-            <div className="home-card">
-              <h2>Projeto Matthew Harris</h2>
-              <p className="done-project-status">Finalizado</p>
-              <p className="card-content">
-                Início: 20/04/2018 <br />
-                Fim: 30/05/2018
-              </p>
+        const token = response.data.data.token
+
+        this.setState({token: response.data.data.token})
+
+        const projectResponse = await axios.get(`${baseUrl}/v1/projects`, {
+            data: {},
+            headers: {
+                Authorization: `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+        })
+
+        console.log(projectResponse)
+        const projects = projectResponse.data.data
+        console.log(projects)
+        this.setState({ projects })
+    }
+
+    render() {
+        return (
+            <div className="home-component-container">
+            <h1 className="home-title">Projects</h1>
+            <div className="projects-row">
+            {
+                this.state.projects.map( project => {
+                    let statusIcon = ""
+                    switch(project.status) {
+                        case "Done":
+                            statusIcon = "done"
+                            break
+                        case "Cancelled":
+                            statusIcon = "canceled"
+                            break
+                        default:
+                            statusIcon = "wip"
+                            break
+                    }
+                    return (
+                       <Link to="/projectinfo1">
+                         <div className="home-card">
+                           <h2>{ project.name }</h2>
+                           <p className={`${statusIcon}-project-status`}>{ project.status }</p>
+                           <p className="card-content">
+                             Início: { project.startDate } <br />
+                             Fim: { project.endDate }
+                           </p>
+                         </div>
+                        </Link>
+                    )
+                })
+            }
             </div>
-          </Link>
-          <Link to="/projectinfo2">
-            <div className="home-card">
-              <h2>Projeto Jake Smith</h2>
-              <p className="wip-project-status">Em andamento</p>
-              <p className="card-content">
-                Início: 30/05/2018 <br />
-                Fim previsto: 20/06/2020
-              </p>
             </div>
-          </Link>
-        </div>
-        <div className="projects-row">
-          <Link to="/projectinfo3">
-            <div className="home-card">
-              <h2>Projeto Slello</h2>
-              <p className="wip-project-status">Em andamento</p>
-              <p className="card-content">
-                Início: 20/04/2018 <br />
-                Fim previsto: 30/05/2055
-              </p>
-            </div>
-          </Link>
-          <Link to="/projectinfo4">
-            <div className="home-card">
-              <h2>IC 4</h2>
-              <p className="wip-project-status">Em andamento</p>
-              <p className="card-content">
-                Início: 30/05/2018 <br />
-                Fim previsto: 20/06/2088
-              </p>
-            </div>
-          </Link>
-        </div>
-        <div className="projects-row">
-          <Link to="/projectinfo1">
-            <div className="home-card">
-              <h2>Windows Phone</h2>
-              <p className="canceled-project-status">Cancelado</p>
-              <p className="card-content">
-                Início: 08/11/2010 <br />
-                Fim: 09/11/2010
-              </p>
-            </div>
-          </Link>
-          <Link to="/projectinfo2">
-            <div className="home-card">
-              <img src="img/selected_add_widget.svg" className="add-image" />
-              <h2>Adicionar Projeto</h2>
-            </div>
-          </Link>
-        </div>
-      </div>
-    );
-  }
+        );
+    }
 }
 
 export default Home;
