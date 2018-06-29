@@ -2,7 +2,7 @@
   "name": "slello",
   "version": "0.1.0",
   "private": true,
-  "homapage": "https://jovit.github.io/slello/",
+  "homepage": "https://jovit.github.io/slello/",
   "dependencies": {
     "axios": "^0.18.0",
     "gh-pages": "^1.2.0",
